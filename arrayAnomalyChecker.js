@@ -1,4 +1,4 @@
-export default function anomalyChecker(array) {
+function anomalyChecker(array) {
   /**
    * Returns either the outlier in an array of numbers or if there are none it returns false
    *
@@ -31,3 +31,5 @@ export default function anomalyChecker(array) {
   if (foundDifferences.length) return foundDifferences;
   else return false;
 }
+
+module.exports = anomalyChecker;
