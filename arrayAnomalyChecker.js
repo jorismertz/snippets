@@ -28,6 +28,6 @@ export default function anomalyChecker(array) {
       foundDifferences.push(i);
     }
   }
-  if (foundDifferences.length > 0) return foundDifferences;
+  if (foundDifferences.length) return foundDifferences;
   else return false;
 }
