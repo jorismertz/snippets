@@ -1,33 +1,36 @@
 {
-  // Place your snippets for typescriptreact here. Each snippet is defined under a snippet name and has a prefix, body and
-  // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
-  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
-  // same ids are connected.
-  // Example:
-  // "Print to console": {
-  // 	"prefix": "log",
-  // 	"body": [
-  // 		"console.log('$1');",
-  // 		"$2"
-  // 	],
-  // 	"description": "Log output to console"
-  // }
-  "Typescript react functional component": {
-    "prefix": "rts",
-    "body": [
-      "import { ReactElement } from 'react';",
-      "",
-      "interface Props {}",
-      "",
-      "const $1 = (): ReactElement => {",
-      "  return (",
-      "    <div>",
-      "      <h1>$2</h1>",
-      "    </div>",
-      "  );",
-      "};",
-      "",
-      "export default $1;"
-    ]
-  }
+	"Typescript react functional component": {
+		"prefix": "rts",
+		"body": [
+			"import { ReactElement } from 'react';",
+			"",
+			"interface Props {}",
+			"",
+			"const $1 = (): ReactElement => {",
+			"  return (",
+			"    <div>",
+			"      <h1>$2</h1>",
+			"    </div>",
+			"  );",
+			"};",
+			"",
+			"export default $1;"
+		]
+	 },
+	 "Cva component starter": {
+		"prefix": "cva",
+		"body": [
+		"import type { VariantProps } from 'class-variance-authority';",
+		"import type { ComponentProps } from 'react';",
+		"import { cva } from 'class-variance-authority';",
+		"",
+		"const style = cva('');",
+		"",
+		"interface Props extends VariantProps<typeof style>, ComponentProps<'$1'> {}",
+		"",
+		"export const $2 = ({ children }: Props) => {",
+		"  return <$1 className={style()}>{children}</$1>;",
+		"};"
+		]
+	 }
 }
